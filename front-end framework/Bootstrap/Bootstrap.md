@@ -154,7 +154,7 @@ Bootstrap 的网格系统可以适应所有六个默认断点以及自定义的�
 ```
 
 从最小尺寸到最大屏幕尺寸，一直都是等宽分布：
-![](images/Pasted_image_20241021103408.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021103408.png)
 
 (1) 可以通过类似 `col-sm-6` 来显示指定每列的宽度和布局响应。当屏幕尺寸大于等于 `sm` (576px) ，该列占 6 份；当屏幕尺寸小于 `sm` (576px) 时，该列宽度为 100%，即占满 12 份，此时多个 col 会在竖直方向上堆叠显示。
 ```html
@@ -171,10 +171,10 @@ Bootstrap 的网格系统可以适应所有六个默认断点以及自定义的�
 </div>
 ```
 屏幕尺寸大于等于 `sm` (576px) 时的效果：
-![](images/Pasted_image_20241021103909.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021103909.png)
 
 屏幕尺寸小于 `sm` (576px) 时的效果：
-![](images/Pasted_image_20241021104002.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021104002.png)
 
 （2）可根据需要为每个层使用不同类的组合，进行混搭。
 ```html
@@ -194,10 +194,10 @@ Bootstrap 的网格系统可以适应所有六个默认断点以及自定义的�
 </div>
 ```
 屏幕尺寸大于等于 `md` (768px) 时的效果：
-![](images/Pasted_image_20241021104502.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021104502.png)
 
 屏幕尺寸小于 `md` (768px) 时的效果，一行最多显示 12 份，**多了会换行显示**：
-![](images/Pasted_image_20241021104600.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021104600.png)
 
 （3）`row-cols-*` 类可以设置类似表格的布局，需要添加到 `.row` 类上。普通的 `.col-*` 类适用于单个列（例如，`.col-md-4`）。在 `.row` 上设置为快捷方式使用， `.row-cols-auto` 可以为列提供自然宽度。
 ```html
@@ -213,12 +213,12 @@ Bootstrap 的网格系统可以适应所有六个默认断点以及自定义的�
 `row-cols-1` 表示每行 1 列，每列占 12 份。
 
 屏幕尺寸大于等于 `md` (768px) 时, 每行 4 列：
-![](images/Pasted_image_20241021105615.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021105615.png)
 
 屏幕尺寸小于 md, 大于 sm 时，每行 2 列：
-![](images/Pasted_image_20241021105649.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021105649.png)
 屏幕尺寸小于 sm 时，每行 1 列：
-![](images/Pasted_image_20241021105717.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021105717.png)
 
 （4）嵌套
 在现有 `.col-sm-*` 列中添加新的 `.row` 和一组 `.col-sm-*` 列可以使用嵌套。嵌套行应包括一组总和不超过 12 的列（不要求使用所有 12 个可用列）。
@@ -242,10 +242,10 @@ Bootstrap 的网格系统可以适应所有六个默认断点以及自定义的�
 </div>
 ```
 屏幕尺寸大于 sm 时的效果：
-![](images/Pasted_image_20241021110002.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021110002.png)
 
 屏幕尺寸小于 sm 的效果：
-![](images/Pasted_image_20241021110031.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021110031.png)
 # 5 列（Columns）
 ## 对齐
 (1) 垂直对齐方式
@@ -266,7 +266,7 @@ bootstrap 的网格系统的主轴默认为 x 轴，纵轴默认为 y 轴。
   </div>
 </div>
 ```
-![](images/Pasted_image_20241021112328.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021112328.png)
 
 使用 `align-self-*` 设置某个列单独的垂直对齐方式，`*` 的取值有 start、center、end。
 ```html
@@ -284,7 +284,7 @@ bootstrap 的网格系统的主轴默认为 x 轴，纵轴默认为 y 轴。
   </div>
 </div>
 ```
-![](images/Pasted_image_20241021112454.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021112454.png)
 
 (2) 水平对齐方式
 使用响应式 `justify-content-*` 类来进行控制，`*` 的取值有 start (靠左)、center 居中、end 靠右、between、around、evenly.
@@ -301,7 +301,7 @@ bootstrap 的网格系统的主轴默认为 x 轴，纵轴默认为 y 轴。
 </div>
 ```
 
-![](images/Pasted_image_20241021113210.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021113210.png)
 
 ## 列排序
 使用 `.order-` 类来控制内容的**视觉顺序**。这些类是响应式的，因此可以通过断点（例如，`.order-1 .order-md-2`）设置 `顺序`。包括对所有六个网格层的 `1` 到 `5` 的支持。如果需要更多的 `.order-*` 类，可以通过 Sass 变量修改默认数字。
@@ -320,7 +320,7 @@ bootstrap 的网格系统的主轴默认为 x 轴，纵轴默认为 y 轴。
   </div>
 </div>
 ```
-![](images/Pasted_image_20241021113631.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021113631.png)
 
 还有响应式 `.order-first` 和 `.order-last` 类，它们分别通过应用 `order： -1` 和 `order： 6` 来更改元素 `的顺序`。这些类也可以根据需要与编号的 `.order-*` 类混合。
 
@@ -341,7 +341,7 @@ bootstrap 的网格系统的主轴默认为 x 轴，纵轴默认为 y 轴。
   </div>
 </div>
 ```
-![](images/Pasted_image_20241021113910.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241021113910.png)
 
 # 6 Display 属性
 使用 `d-{value}` 或 `d-{breakpoint}-{value}` 对元素赋予类名，进而控制元素的 dispaly 属性。

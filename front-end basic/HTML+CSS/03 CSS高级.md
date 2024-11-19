@@ -71,7 +71,11 @@ IcoMoon 成立于 2011 年，推出了第一个自定义图标字体生成器，
 
 （5）字体图标的引入（以 icomoon 为例）
 - 把下载包里面的 **fonts** 文件夹放入页面根目录下
+<<<<<<< HEAD
 ![1](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626140813.png)
+=======
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626140813.png)
+>>>>>>> a481a1e (修复了md文件图片无法显示的问题)
 
 - 在 CSS 样式中全局声明字体： 简单理解把这些字体文件通过 css 引入到我们页面中。注意字体文件路径的问题。
 ```css
@@ -87,7 +91,7 @@ IcoMoon 成立于 2011 年，推出了第一个自定义图标字体生成器，
  }
 ```
 - 在 html 标签内添加小图标。将下载下来的字体图标文件夹中的 `□` 图标，复制到 html 标签中。
- ![](images/Pasted_image_20240626140939.png)
+ ![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626140939.png)
  - 给标签定义字体
  ```css
 span {
@@ -95,12 +99,12 @@ span {
  }
 ```
 注意：务必保证这个字体和上面@font-face 里面的字体保持一致
-![](images/Pasted_image_20240626141213.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626141213.png)
 
 （6）字体图标的追加
 如果工作中，原来的字体图标不够用了，我们需要添加新的字体图标到原来的字体文件中。
 把压缩包里面的 **selection. json** 从新上传，然后选中自己想要新的图标，从新下载压缩包，并替换原来的文件即可。
-![](images/Pasted_image_20240626141251.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626141251.png)
 
 # 3 CSS 三角
 （1）两条直角边相等的三角形
@@ -116,7 +120,7 @@ span {
  }
 ```
 显示效果如下：
-![](images/Pasted_image_20240626141727.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626141727.png)
 
 因此，可用 css 边框可以模拟三角效果。宽度高度为 0。
 4 个边框都要写，只保留需要的边框颜色，其余的不能省略，都改为 transparent 透明就好了。
@@ -184,7 +188,7 @@ span {
 </html>
 ```
 
-![](images/Pasted_image_20240927085218.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240927085218.png)
 
 （2）两条直角边不等的三角形
 ```html
@@ -216,7 +220,7 @@ span {
 </body>
 ```
 
-![不等边直角三角形](images/Pasted_image_20240627224836.png)
+![不等边直角三角形](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240627224836.png)
 
 # 4 界面样式
 所谓的界面样式，就是更改一些用户操作样式，以便提高更好的用户体验。
@@ -269,7 +273,7 @@ vertical-align : baseline | top | middle | bottom
 | middle   | 把此元素放置在父元素的中部。             |
 | bottom   | 把元素的顶端与行中最低的元素的顶端对齐。 |
 
-![](images/Pasted_image_20240626143831.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626143831.png)
 ## 4.5 解决图片底部默认空白缝隙问题
 bug：图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。
 主要解决方法有两种：
@@ -292,8 +296,8 @@ text-overflow: ellipsis;
 
 # 5 常见布局技巧
 ## 5.1 margin 负值的运用
-![](images/Pasted_image_20240627143513.png)
-![](images/Pasted_image_20240627143517.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240627143513.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240627143517.png)
 
 让每个盒子 margin 往左侧移动 -1px 正好压住相邻盒子边框。
 鼠标经过某个盒子的时候，提高当前盒子的层级即可（如果没有有定位，则加相对定位（保留位置），如果有定位，则加 z-index）
@@ -340,7 +344,7 @@ text-overflow: ellipsis;
 ```
 ## 5.2 文字围绕浮动元素
 巧妙运用浮动元素不会压住文字的特性即可，布局示意图如下：
-![](images/Pasted_image_20240627144742.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240627144742.png)
 
 ```html
 <!DOCTYPE html>
@@ -453,7 +457,7 @@ text-overflow: ellipsis;
 </html>
 ```
 效果如下：
-![](images/Pasted_image_20240627150601.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240627150601.png)
 # 6 CSS 初始化
 不同浏览器对有些标签的默认值是不同的，为了消除不同浏览器对 HTML 文本呈现的差异，照顾浏览器的兼容，我们需要对 CSS 初始化，即对浏览器默认的样式进行重新设置。
 每个网页都必须首先进行 CSS 初始化。

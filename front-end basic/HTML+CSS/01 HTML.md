@@ -299,7 +299,7 @@ Web 标准提出的最佳体验方案： 结构、样式、行为相分离。
 ```
 3. 自定义列表 (Description List)
 自定义列表常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号。(一个大哥领着一群小弟)
-![](images/Pasted_image_20230329162446.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20230329162446.png)
 
 ```html
 <!-- <dl></dl> 里面只能包含 <dt> 和<dd>。

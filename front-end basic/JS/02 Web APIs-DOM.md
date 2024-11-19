@@ -9,7 +9,7 @@
 
 # 1 Web APIs 介绍
 严格意义上讲，我们在 JavaScript 阶段学习的知识绝大部分属于 ECMAScript 的知识体系，ECMAScript 简称 ES 它提供了一套语言标准规范，如变量、数据类型、表达式、语句、函数等语法规则都是由 ECMAScript 规定的。浏览器将 ECMAScript 大部分的规范加以实现，并且在此基础上又扩展一些实用的功能，这些被扩展出来的内容我们称为 Web APIs。
-![](images/Pasted_image_20240625084138.png)
+![[Pasted image 20240625084138.png]]
 
 ECMAScript 运行在浏览器中然后再结合 Web APIs 才是真正的 JavaScript，**Web APIs 的核心是 DOM 和 BOM。**
 
@@ -17,7 +17,7 @@ ECMAScript 运行在浏览器中然后再结合 Web APIs 才是真正的 JavaScr
 DOM（Document Object Model）是将整个 HTML 文档的每一个标签元素视为一个对象，这个对象下包含了许多的属性和方法，通过操作这些属性或者调用这些方法实现对 HTML 的动态更新，为实现网页特效以及用户交互提供技术支撑。
 （1）DOM 树
 将 HTML 文档以树状结构直观的表现出来，我们称之为文档树或 DOM 树，**文档树直观的体现了标签与标签之间的关系。**
-![](images/Pasted_image_20240625084418.jpg)
+![[Pasted image 20240625084418.jpg]]
 
 （2）DOM 节点
 节点是文档树的组成部分，**每一个节点都是一个 DOM 对象**，主要分为元素节点、属性节点、文本节点等。
@@ -345,7 +345,7 @@ element.classList.contains('className')
 </html>
 ```
  其他方法： `Element.getBoundingClientRect()` 方法返回一个 [`DOMRect`](https://developer.mozilla.org/zh-CN/docs/Web/API/DOMRect) 对象，其提供了元素的大小及其相对于[视口](https://developer.mozilla.org/zh-CN/docs/Glossary/Viewport)的位置。
- ![](images/Pasted_image_20240708141353.png)
+ ![[Pasted image 20240708141353.png]]
 
 | 属性          | 作用         | 说明                                               |
 |---------------|--------------|---------------------------------------------------|
@@ -412,7 +412,7 @@ window.addEventListener('scroll', function () {
 ### PC 端事件
 将众多的事件类型分类可分为：鼠标事件、键盘事件、表单事件、焦点事件等。
 （1）常见的基本事件
-![](images/Pasted_image_20240628154806.png)
+![[Pasted image 20240628154806.png]]
 
 （2）页面加载事件
 外部资源（ 如图片、外联 CSS 和 JavaScript 等） 加载完毕时触发的事件。
@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function(){
 （3）页面滚动事件
 滚动条在滚动的时候**持续触发**的事件。
 使用场景： 网页需要检测用户把页面滚动到某个区域后做一些处理，比如固定导航栏，比如返回顶部。
-![](images/Pasted_image_20240705083851.png)
+![[Pasted image 20240705083851.png]]
 a. 监听整个页面滚动：
 ```js
 window.addEventListener('scroll', function() {
@@ -473,7 +473,7 @@ backTop.addEventListener('click', function(){
 (4) 页面尺寸事件
 窗口尺寸改变的时触发的事件。
 `clientWidth` 和 `clientHeight` 属性用于获取**元素可见部分**的宽高，不包含边框（border）、margin、滚动条等，但包含 padding。
-![](images/Pasted_image_20240705085300.png)  ^40f768
+![[Pasted image 20240705085300.png]]  ^40f768
 ```js
 window.addEventListener('resize', function() {
     // 检查屏幕宽度
@@ -599,7 +599,7 @@ box.addEventListener('touchend', function (e) {
     - 例如：`element.addEventListener('click', function(event) { event.stopPropagation(); }, true);` 这里的`true`表示使用捕获模式。
 # 5 事件流
 事件流指的是事件完整执行过程中的流动路径。
-  ![](images/Pasted_image_20240701203020.png)
+  ![[Pasted image 20240701203020.png]]
 ## 5.1 捕获和冒泡
 （1）定义
 如上图所示，任意事件被触发时总会经历两个阶段：【捕获阶段】和【冒泡阶段】。简言之，捕获阶段是【从父到子】的传导过程，冒泡阶段是【从子向父】的传导过程。
@@ -990,7 +990,7 @@ ECMAScript 中内置了获取系统时间的对象 Date，使用 Date 时与之�
 </body>
 ```
 下图中灰色盒子内部为插入的节点：
-![](images/Pasted_image_20241023094550.png)
+![[Pasted image 20241023094550.png]]
 
 
 结论：
@@ -1034,7 +1034,7 @@ ECMAScript 中内置了获取系统时间的对象 Date，使用 Date 时与之�
 </body>
 ```
 下图中红色和蓝色为新插入的节点：
-![](images/Pasted_image_20241023094251.png)
+![[Pasted image 20241023094251.png]]
 ## 7.2 删除节点
 删除现有的 DOM 节点，**只能由父节点删除子节点**。
 语法：`父元素.removeChild(要删除的元素)`
@@ -1141,7 +1141,7 @@ DOM 树中的任意节点都不是孤立存在的，它们要么是父子关系�
 </body>
 ```
 控制台中的输出如下：
-![](images/Pasted_image_20241023095059.png)
+![[Pasted image 20241023095059.png]]
 
 (3) 查找兄弟节点：
 - `previousElementSibling` 获取前一个节点，以相对位置查找节点，实际应用中非常灵活。
@@ -1173,11 +1173,11 @@ DOM 树中的任意节点都不是孤立存在的，它们要么是父子关系�
 ```
 
 案例：在关闭广告二维码的时候，当在子元素 x 上点击时，获取其父节点，关闭其父节点即可。
-![](images/Pasted_image_20240716090321.png)
+![[Pasted image 20240716090321.png]]
 
 ## 7.4 重绘和回流
 （1）浏览器界面渲染的流程如下：
-![](images/Pasted_image_20241023095945.png)
+![[Pasted image 20241023095945.png]]
 - 解析（ Parser） HTML，生成 DOM 树 (DOM Tree)  
 - 同时解析（ Parser） CSS，生成样式规则 (Style Rules)  
 - 根据 DOM 树和样式规则，生成渲染树 (Render Tree)  
@@ -1198,7 +1198,7 @@ DOM 树中的任意节点都不是孤立存在的，它们要么是父子关系�
 （1）至官网下载相应的 swiper 文件
 [下载Swiper - Swiper中文网](https://www.swiper.com.cn/download/index.html)
 （2）下载好之后，解压缩，demo 文件夹中有各种示例。将需要使用的用浏览器打开，在浏览器中查看源代码。
-![](images/Pasted_image_20240722085124.png)
+![[Pasted image 20240722085124.png]]
 （3）注意查看源代码中引入 swiper 的 css 文件和 js 文件部分，将其复制到自己的 html 文件中。
 ```html
 <!-- Link Swiper's CSS -->

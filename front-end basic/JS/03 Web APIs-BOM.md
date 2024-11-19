@@ -22,7 +22,7 @@ JS 执行遵循的机制：
 1. 先执行执行栈中的同步任务。 
 2. 异步任务放入任务队列中。 
 3. 一旦执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行。
-![](images/Pasted_image_20241025083243.png)
+![[Pasted image 20241025083243.png]]
 主线程不断的重复获得任务、执行任务、再获取任务、再执行的机制被称为**事件循环 (event loop)**。
 ```js
 // 判断下列代码的输出
@@ -47,7 +47,7 @@ setTimeout(function(){
 - 所有通过 var 定义在全局作用域中的变量、函数都会变成 window 对象的属性和方法
 - window 对象下的属性和方法调用的时候可以省略 window。
 - `window.confirm(message)` ：弹出确认窗口，message 为提示消息字符串，返回布尔值。
-![](images/Pasted_image_20241025081523.png)
+![[Pasted image 20241025081523.png]]
 ## 2.1 定时器-延迟函数
 JavaScript 内置的用来延迟执行的函数，叫 `setTimeout`，仅执行一次
 **语法：**
@@ -147,7 +147,7 @@ navigator 对象记录了浏览器自身的相关信息。
 ## 2.4 histroy 对象
 history (历史) 对象主要管理历史记录，该对象与浏览器地址栏的操作相对应，如前进、后退等。
 history 对象一般在实际开发中比较少用，但是会在一些 OA 办公系统中见到。
-![](images/Pasted_image_20241025081909.png)
+![[Pasted image 20241025081909.png]]
 
 常见方法：
 
@@ -217,7 +217,7 @@ history 对象一般在实际开发中比较少用，但是会在一些 OA 办�
 </html>
 ~~~
 浏览器查看本地存储：
-![](images/Pasted_image_20241025084240.png)
+![[Pasted image 20241025084240.png]]
 ## 3.2 sessionStorage
 特性：
 - 用法跟 localStorage 基本相同
@@ -340,7 +340,7 @@ js 中的 `\W` 相当于 `[^A-Za-z0-9_]`，表示任意除字母、数字和下�
 ~~~
 
 ## 4.3  正则插件
-![](images/Pasted_image_20241028101715.png)
+![[Pasted image 20241028101715.png]]
 
 
 
