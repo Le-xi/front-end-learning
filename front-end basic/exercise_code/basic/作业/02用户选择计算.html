@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户选择计算</title>
+</head>
+
+<body>
+  <script>
+    while (true) {
+      let operator = prompt('1.请输入运算符：+、-、*、/计算两个数的结果\n2.输入q退出程序');
+
+      // 如果用户输入的是q，退出循环
+      if (operator === 'q') {
+        break;
+      }
+
+      let num1 = prompt('请输入第一个数字：');
+      let num2 = prompt('请输入第二个数字：');
+
+      num1 = parseFloat(num1);
+      num2 = parseFloat(num2);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert('输入的数字无效，请重新输入！');
+        continue;
+      }
+
+      if (operator === '+') {
+        alert(num1 + num2);
+      } else if (operator === '-') {
+        alert(num1 - num2);
+      } else if (operator === '*') {
+        alert(num1 * num2);
+      } else if (operator === '/') {
+        if (num2 === 0) {
+          alert('除数不能为0，请重新输入！');
+          continue;
+        }
+        alert(num1 / num2);
+      } else {
+        alert('运算符无效，请重新输入！');
+        continue;
+      }
+    }
+  </script>
+</body>
+
+</html>

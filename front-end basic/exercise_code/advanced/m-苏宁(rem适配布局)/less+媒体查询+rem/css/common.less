@@ -1,0 +1,33 @@
+@num: 15;
+
+.mediaQuery(@screenWidth, @num) {
+    @media screen and (min-width:@screenWidth) {
+
+        // 新版本less中除法要加括号
+        html {
+            font-size: (@screenWidth / @num);
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+// pc端默认字体大小
+html {
+    font-size: 50px;
+}
+
+/* 媒体查询 */
+.mediaQuery(320px, @num);
+.mediaQuery(360px, @num);
+.mediaQuery(375px, @num);
+.mediaQuery(384px, @num);
+.mediaQuery(400px, @num);
+.mediaQuery(414px, @num);
+.mediaQuery(424px, @num);
+.mediaQuery(480px, @num);
+.mediaQuery(540px, @num);
+.mediaQuery(720px, @num);
+.mediaQuery(750px, @num);

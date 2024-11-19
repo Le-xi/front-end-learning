@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M端事件</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    var box = document.querySelector('.box');
+    box.addEventListener('touchstart', function (e) {
+      console.log('touchstart');
+    });
+    box.addEventListener('touchmove', function (e) {
+      console.log('touchmove');
+    });
+    box.addEventListener('touchend', function (e) {
+      console.log('touchend');
+    });
+  </script>
+</body>
+
+</html>

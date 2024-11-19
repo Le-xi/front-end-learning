@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .countdown {
+      width: 240px;
+      height: 305px;
+      text-align: center;
+      line-height: 1;
+      color: #fff;
+      background-color: brown;
+      /* background-size: 240px; */
+      /* float: left; */
+      overflow: hidden;
+    }
+
+    .countdown .next {
+      font-size: 16px;
+      margin: 25px 0 14px;
+    }
+
+    .countdown .title {
+      font-size: 33px;
+    }
+
+    .countdown .tips {
+      margin-top: 80px;
+      font-size: 23px;
+    }
+
+    .countdown small {
+      font-size: 17px;
+    }
+
+    .countdown .clock {
+      width: 142px;
+      margin: 18px auto 0;
+      overflow: hidden;
+    }
+
+    .countdown .clock span,
+    .countdown .clock i {
+      display: block;
+      text-align: center;
+      line-height: 34px;
+      font-size: 23px;
+      float: left;
+    }
+
+    .countdown .clock span {
+      width: 34px;
+      height: 34px;
+      border-radius: 2px;
+      background-color: #303430;
+    }
+
+    .countdown .clock i {
+      width: 20px;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="countdown">
+    <p class="next">今天是2222年2月22日</p>
+    <p class="title">下班倒计时</p>
+    <p class="clock">
+      <span id="hour">00</span>
+      <i>:</i>
+      <span id="minutes">25</span>
+      <i>:</i>
+      <span id="scond">20</span>
+    </p>
+    <p class="tips">18:30:00下班</p>
+  </div>
+  <script>
+    const hour = document.getElementById('hour');
+    const minutes = document.getElementById('minutes');
+    const scond = document.getElementById('scond');
+    const next = document.querySelector('.next');
+
+    function getMyTime() {
+      const now = new Date();
+      // 获取当前时间戳
+      const nowTime = now.getTime();
+      // 获取今天下班时间戳
+      const targetTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 30, 0).getTime();
+      next.innerText = `今天是${now.getFullYear()}年${now.getMonth() + 1}月${now.getDate()}日`;
+
+      let time = targetTime - nowTime;
+      let h = Math.floor(time / 1000 / 60 / 60);
+      let m = Math.floor(time / 1000 / 60 % 60);
+      let s = Math.floor(time / 1000 % 60);
+      h = h < 10 ? '0' + h : h;
+      m = m < 10 ? '0' + m : m;
+      s = s < 10 ? '0' + s : s;
+      hour.innerText = h;
+      minutes.innerText = m;
+      scond.innerText = s;
+    }
+
+    getMyTime();
+    setInterval(getMyTime, 1000);
+  </script>
+</body>
+
+</html>

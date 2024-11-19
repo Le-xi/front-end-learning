@@ -1,0 +1,179 @@
+@import url(base.less);
+@baseSize: 3.75vmin;
+@color: #fb7299;
+
+.wAndH(@width, @height) {
+    width: (@width/@baseSize);
+    height: (@height/@baseSize);
+}
+
+.suspension {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+
+    .m-navbar {
+        height: (44/@baseSize);
+        padding: 0 (12/@baseSize) 0 (18/@baseSize);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .search {
+            color: #ccc;
+
+            i {
+                font-size: (24/@baseSize);
+            }
+        }
+
+        .logo {
+            i {
+                font-size: (28/@baseSize);
+                color: @color;
+            }
+        }
+
+        .right {
+            display: flex;
+
+            .face {
+                overflow: hidden;
+                .wAndH(24, 24);
+                border-radius: 50%;
+                margin: 0 (12/@baseSize);
+            }
+
+            .app-btn {
+                .wAndH(72, 24);
+                background-color: @color;
+                color: #fff;
+                text-align: center;
+                line-height: (24/@baseSize);
+                border-radius: (5/@baseSize);
+            }
+        }
+    }
+
+    .channel-menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: (40/@baseSize);
+        border-bottom: 1px solid #e7e7e7;
+
+        .tabs {
+            flex: 1;
+
+            .tabs-list {
+                display: flex;
+                overflow: hidden;
+
+                a {
+                    padding: 0 (16/@baseSize);
+                    //文字强制一行显示
+                    white-space: nowrap;
+                    font-size: (14/@baseSize);
+                    height: (40/@baseSize);
+                    line-height: (40/@baseSize);
+
+                    &:hover {
+                        color: @color;
+                    }
+                }
+
+                .line {
+                    position: absolute;
+                    bottom: 0;
+                    left: (16/@baseSize);
+                    .wAndH(28, 2);
+                    background-color: @color;
+                }
+            }
+        }
+
+        .after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: (40/@baseSize);
+            height: (39/@baseSize);
+            background-color: #fff;
+            text-align: center;
+            line-height: (39/@baseSize);
+            color: #ccc;
+
+            i {
+                font-size: (20/@baseSize);
+            }
+        }
+    }
+}
+
+// 主体
+
+.m-home {
+    padding: (85/@baseSize) (5/@baseSize) 0;
+
+    .video-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .video-item {
+            width: 50%;
+            padding: (8/@baseSize) (5/@baseSize);
+
+            .card {
+                position: relative;
+                height: (97/@baseSize);
+
+                .count {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 (5/@baseSize);
+                    width: 100%;
+                    height: (27/@baseSize);
+                    color: #fff;
+                    font-size: (12/@baseSize);
+                    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .5));
+                }
+            }
+
+            .title {
+                font-size: (12/@baseSize);
+                margin-top: (8/@baseSize);
+                color: #333;
+            }
+        }
+    }
+}
+
+// 尾部
+.app-download {
+    position: fixed;
+    bottom: (40/@baseSize);
+    left: 0;
+    width: 100%;
+    height: (38/@baseSize);
+
+    .download-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .wAndH(300, 38);
+        background-color: @color;
+        color: #fff;
+        text-align: center;
+        line-height: (38/@baseSize);
+        border-radius: (19/@baseSize);
+    }
+}

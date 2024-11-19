@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      width: 80px;
+    }
+
+    input[type=text] {
+      width: 50px;
+      height: 44px;
+      outline: none;
+      border: 1px solid #ccc;
+      text-align: center;
+      border-right: 0;
+    }
+
+    input[type=button] {
+      height: 24px;
+      width: 22px;
+      cursor: pointer;
+    }
+
+    input {
+      float: left;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="total" value="1" readonly>
+    <input type="button" value="+" id="add">
+    <input type="button" value="-" id="reduce" disabled>
+    <script>
+      const add_btn = document.querySelector('#add');
+      const reduce_btn = document.querySelector('#reduce');
+      const total = document.querySelector('#total');
+
+      add_btn.addEventListener('click', function () {
+        total.value = parseInt(total.value) + 1;
+        // 当点击加号按钮时，减号按钮可用
+        reduce_btn.disabled = false;
+      })
+
+      reduce_btn.addEventListener('click', function () {
+        total.value = parseInt(total.value) - 1;
+        // 当点击减号按钮时，如果减到1，减号按钮不可用
+        if (total.value === '1') {
+          reduce_btn.disabled = true;
+        }
+      })
+
+    </script>
+  </div>
+</body>
+
+</html>

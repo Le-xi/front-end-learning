@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>学生信息管理</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <h1>新增学员</h1>
+  <form class="info" autocomplete="off">
+    姓名：<input type="text" class="uname" name="uname" />
+    年龄：<input type="text" class="age" name="age" />
+    性别:
+    <select name="gender" class="gender">
+      <option value="男">男</option>
+      <option value="女">女</option>
+    </select>
+    薪资：<input type="text" class="salary" name="salary" />
+    就业城市：<select name="city" class="city">
+      <option value="北京">北京</option>
+      <option value="上海">上海</option>
+      <option value="广州">广州</option>
+      <option value="深圳">深圳</option>
+      <option value="曹县">曹县</option>
+    </select>
+    <button class="add">录入</button>
+  </form>
+
+  <h1>就业榜</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>薪资</th>
+        <th>就业城市</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 
+        <tr>
+          <td>1001</td>
+          <td>欧阳霸天</td>
+          <td>19</td>
+          <td>男</td>
+          <td>15000</td>
+          <td>上海</td>
+          <td>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr> 
+        -->
+    </tbody>
+  </table>
+  <script>
+    // 初始数据, 存入本地存储用于调试
+    // const initData = [
+    //   {
+    //     stuId: 1001,
+    //     uname: '欧阳修',
+    //     age: 19,
+    //     gender: '男',
+    //     salary: '20000',
+    //     city: '上海',
+    //   }
+    // ]
+    // localStorage.setItem('student', JSON.stringify(initData))
+
+    // 页面加载时, 读取本地存储数据,渲染到页面
+    // 获取本地存储数据
+    const student = JSON.parse(localStorage.getItem('student')) || []
+    const tbody = document.querySelector('tbody')
+    // render()函数返根据数组返回表格的字符串
+    function render() {
+      const trArr = student.map(function (item) {
+        return `
+        <tr>
+          <td>${item.stuId}</td>
+          <td>${item.uname}</td>
+          <td>${item.age}</td>
+          <td>${item.gender}</td>
+          <td>${item.salary}</td>
+          <td>${item.city}</td>
+          <td>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr>
+        `
+      })
+
+      console.log(trArr)
+      tbody.innerHTML = trArr.join('')
+    }
+
+    render()
+
+    // 录入按钮点击事件
+    const info = document.querySelector('.info')
+    const uname = document.querySelector('.uname')
+    const age = document.querySelector('.age')
+    const salary = document.querySelector('.salary')
+    const gender = document.querySelector('.gender')
+    const city = document.querySelector('.city')
+    info.addEventListener('submit', function (e) {
+      // 阻止默认行为
+      e.preventDefault()
+      // 非空判断
+      if (!uname.value.trim() || !age.value.trim() || !salary.value.trim()) {
+        alert('请填写完整信息')
+        return
+      }
+      // 提交表单时,新数据追加到数组中,并存入本地存储
+      student.push({
+        // 学号自动生成,取数组中最后一个学号+1,初始值为1001
+        stuId: student.length ? student[student.length - 1].stuId + 1 : 1001,
+        uname: uname.value,
+        age: age.value,
+        gender: gender.value,
+        salary: salary.value,
+        city: city.value
+      })
+      localStorage.setItem('student', JSON.stringify(student))
+      // 渲染页面
+      render()
+      this.reset() // 重置表单
+    })
+
+    // 删除按钮点击事件
+    tbody.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        // 获取当前行的学号
+        const stuId = e.target.parentNode.parentNode.children[0].textContent
+        // 确认删除
+        if (!confirm('确定删除吗?')) return
+        // 根据学号删除数组中对应的数据
+        student.splice(student.findIndex(item => item.stuId === +stuId), 1)
+        // 重新存入本地存储
+        localStorage.setItem('student', JSON.stringify(student))
+        // 重新渲染页面
+        render()
+      }
+    })
+  </script>
+</body>
+
+</html>

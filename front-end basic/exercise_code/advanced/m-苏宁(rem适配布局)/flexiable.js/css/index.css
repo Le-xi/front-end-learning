@@ -1,0 +1,107 @@
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 75px !important;
+  }
+}
+
+body {
+  min-width: 320px;
+  max-width: 750px;
+  width: 10rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.search-content {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 1.1733rem;
+}
+
+.search-content .classify {
+  width: .5867rem;
+  height: .9333rem;
+  background: url(../images/classify.png) no-repeat;
+  background-size: .5867rem .9333rem;
+  margin: .1467rem .3333rem .1333rem;
+}
+
+.search-content .search {
+  flex: 1;
+}
+
+.search-content .search input {
+  outline: none;
+  width: 100%;
+  margin-top: .1333rem;
+  padding-left: .8rem;
+  border: 0;
+  height: .88rem;
+  border-radius: 33px;
+  color: #666;
+  font-size: .3333rem;
+}
+
+.search-content .login {
+  width: 1rem;
+  height: .9333rem;
+  line-height: .9333rem;
+  margin: .1333rem;
+  font-size: .3333rem;
+  text-align: center;
+  color: #fff;
+}
+
+.banner {
+  width: 10rem;
+  height: 4.9067rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.ad {
+  display: flex;
+}
+
+.ad a {
+  flex: 1;
+}
+
+.ad a img {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 10rem;
+  background-color: #fff;
+}
+
+nav a {
+  flex: 20%;
+  text-align: center;
+  font-size: .2667rem;
+  color: #333;
+}
+
+nav a img {
+  display: block;
+  width: 1.0933rem;
+  height: 1.0933rem;
+  margin: .1333rem auto 0;
+}

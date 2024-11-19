@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: Helvetica Neue, Tahoma, Arial, PingFangSC-Regular, Hiragino Sans GB, Microsoft Yahei, sans-serif;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+.ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.suspension {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+}
+.suspension .m-navbar {
+  height: 11.73333333vmin;
+  padding: 0 3.2vmin 0 4.8vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.suspension .m-navbar .search {
+  color: #ccc;
+}
+.suspension .m-navbar .search i {
+  font-size: 6.4vmin;
+}
+.suspension .m-navbar .logo i {
+  font-size: 7.46666667vmin;
+  color: #fb7299;
+}
+.suspension .m-navbar .right {
+  display: flex;
+}
+.suspension .m-navbar .right .face {
+  overflow: hidden;
+  width: 6.4vmin;
+  height: 6.4vmin;
+  border-radius: 50%;
+  margin: 0 3.2vmin;
+}
+.suspension .m-navbar .right .app-btn {
+  width: 19.2vmin;
+  height: 6.4vmin;
+  background-color: #fb7299;
+  color: #fff;
+  text-align: center;
+  line-height: 6.4vmin;
+  border-radius: 1.33333333vmin;
+}
+.suspension .channel-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10.66666667vmin;
+  border-bottom: 1px solid #e7e7e7;
+}
+.suspension .channel-menu .tabs {
+  flex: 1;
+}
+.suspension .channel-menu .tabs .tabs-list {
+  display: flex;
+  overflow: hidden;
+}
+.suspension .channel-menu .tabs .tabs-list a {
+  padding: 0 4.26666667vmin;
+  white-space: nowrap;
+  font-size: 3.73333333vmin;
+  height: 10.66666667vmin;
+  line-height: 10.66666667vmin;
+}
+.suspension .channel-menu .tabs .tabs-list a:hover {
+  color: #fb7299;
+}
+.suspension .channel-menu .tabs .tabs-list .line {
+  position: absolute;
+  bottom: 0;
+  left: 4.26666667vmin;
+  width: 7.46666667vmin;
+  height: 0.53333333vmin;
+  background-color: #fb7299;
+}
+.suspension .channel-menu .after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10.66666667vmin;
+  height: 10.4vmin;
+  background-color: #fff;
+  text-align: center;
+  line-height: 10.4vmin;
+  color: #ccc;
+}
+.suspension .channel-menu .after i {
+  font-size: 5.33333333vmin;
+}
+.m-home {
+  padding: 22.66666667vmin 1.33333333vmin 0;
+}
+.m-home .video-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.m-home .video-list .video-item {
+  width: 50%;
+  padding: 2.13333333vmin 1.33333333vmin;
+}
+.m-home .video-list .video-item .card {
+  position: relative;
+  height: 25.86666667vmin;
+}
+.m-home .video-list .video-item .card .count {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.33333333vmin;
+  width: 100%;
+  height: 7.2vmin;
+  color: #fff;
+  font-size: 3.2vmin;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+.m-home .video-list .video-item .title {
+  font-size: 3.2vmin;
+  margin-top: 2.13333333vmin;
+  color: #333;
+}
+.app-download {
+  position: fixed;
+  bottom: 10.66666667vmin;
+  left: 0;
+  width: 100%;
+  height: 10.13333333vmin;
+}
+.app-download .download-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 10.13333333vmin;
+  background-color: #fb7299;
+  color: #fff;
+  text-align: center;
+  line-height: 10.13333333vmin;
+  border-radius: 5.06666667vmin;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      width: 1000px;
+      height: 200px;
+      background-color: pink;
+      margin: 100px auto;
+      text-align: center;
+      font-size: 50px;
+      line-height: 200px;
+      font-weight: 700;
+    }
+
+    .box1 {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      background-color: skyblue;
+      text-align: center;
+      line-height: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    我是广告
+    <div class="box1">X</div>
+  </div>
+  <div class="box">
+    我是广告
+    <div class="box1">X</div>
+  </div>
+  <div class="box">
+    我是广告
+    <div class="box1">X</div>
+  </div>
+  <script>
+    // 获取所有的关闭按钮
+    const box1s = document.querySelectorAll('.box1')
+    // 遍历所有的关闭按钮
+    for (let i = 0; i < box1s.length; i++) {
+      // 为每一个关闭按钮添加点击事件
+      box1s[i].addEventListener('click', function () {
+        // 获取当前点击的关闭按钮的父元素
+        const parent = this.parentNode
+        // 隐藏父元素
+        parent.style.display = 'none'
+      })
+    }
+  </script>
+</body>
+
+</html>

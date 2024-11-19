@@ -1,0 +1,52 @@
+<!-- 根据用户输入的个数，页面可以渲染对应王者荣耀英雄的个数-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渲染王者英雄图片</title>
+  <style>
+    .box {
+      width: 600px;
+      margin: 20px auto;
+    }
+
+    li {
+      float: left;
+      list-style: none;
+      margin: 10px;
+      width: 100px;
+      height: 100px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border: 2px solid #258DF2;
+      border-radius: 10px 0 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <script>
+      let num = prompt('请输入要渲染的王者荣耀英雄的个数(1~20)：');
+      num = parseInt(num);
+      if (isNaN(num) || num <= 0 || num > 20) {
+        alert('输入的数字无效，请重新输入！');
+      }
+      for (let i = 0; i < num; i++) {
+        document.write(`
+            <li>
+              <img src="images/王者荣耀英雄/${i + 1}.webp" alt="">
+            </li>
+          `);
+      }
+    </script>
+  </div>
+
+</body>
+
+</html>

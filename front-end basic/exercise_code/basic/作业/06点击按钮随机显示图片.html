@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <input type="button" value="切换" id="btn"><br>
+  <img src="../images/仓鼠表情包/1.jpg" width="300" id="img">
+
+  <script>
+    const arr = [
+      '../images/仓鼠表情包/1.jpg',
+      '../images/仓鼠表情包/2.jpg',
+      '../images/仓鼠表情包/3.jpg',
+      '../images/仓鼠表情包/4.jpg',
+      '../images/仓鼠表情包/5.jpg',
+      '../images/仓鼠表情包/6.jpg']
+    const btn = document.getElementById('btn')
+    const img = document.getElementById('img')
+    btn.onclick = function () {
+      const index = Math.floor(Math.random() * arr.length)
+      img.src = arr[index]
+    }
+  </script>
+</body>
+
+</html>

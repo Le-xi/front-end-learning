@@ -1,0 +1,105 @@
+// 引入common
+@import "common";
+@baseFontSize: 50px;
+
+.WandH (@w, @h) {
+    width: (@w / @baseFontSize);
+    height: (@h / @baseFontSize);
+}
+
+body {
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-content {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: (88rem / @baseFontSize);
+    // background-color: #ffc001;
+
+    .classify {
+        .WandH(44rem, 70rem);
+        background: url(../images/classify.png) no-repeat;
+        background-size: (44rem / @baseFontSize);
+        margin: (11rem / @baseFontSize) (25rem / @baseFontSize) (7rem / @baseFontSize) (24rem / @baseFontSize);
+    }
+
+    .search {
+        flex: 1;
+
+        input {
+            outline: none;
+            width: 100%;
+            margin-top: (10rem / @baseFontSize);
+            padding-left: (55rem / @baseFontSize);
+            border: 0;
+            height: (66rem / @baseFontSize);
+            border-radius: (33rem / @baseFontSize);
+            // background-color: #fff2cc;
+            color: #666;
+            font-size: (24rem / @baseFontSize);
+        }
+    }
+
+    .login {
+        .WandH(75rem, 70rem);
+        line-height: (70rem / @baseFontSize);
+        margin: (10rem / @baseFontSize);
+        font-size: (25rem / @baseFontSize);
+        text-align: center;
+        color: #fff;
+    }
+}
+
+// banner
+.banner {
+    .WandH(750rem, 368rem);
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.ad {
+    display: flex;
+
+    a {
+        flex: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+//nav
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: (750rem / @baseFontSize);
+    background-color: #fff;
+
+    a {
+        flex: 20%;
+        text-align: center;
+        font-size: (25rem / @baseFontSize);
+        color: #333;
+
+        img {
+            display: block;
+            .WandH(82rem, 82rem);
+            margin: (10rem / @baseFontSize) auto 0;
+        }
+    }
+}

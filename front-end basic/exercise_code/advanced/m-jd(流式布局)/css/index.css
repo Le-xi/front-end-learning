@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /* 清除点击高亮，设置为transparent 透明 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  /*清除按钮默认样式*/
+  /* 加上这个属性才能给按钮和输入框自定义样式*/
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: -apple-system, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #666;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  -webkit-touch-callout: none;
+  vertical-align: middle;
+}
+
+a {
+  -webkit-touch-callout: none;
+  text-decoration: none;
+  color: #666;
+}
+
+/* 顶部 */
+.jd-app {
+  height: 45px;
+}
+
+.jd-app ul li {
+  float: left;
+  line-height: 45px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.jd-app ul li:nth-child(1) {
+  width: 8%;
+}
+
+.jd-app ul li:nth-child(1) img {
+  width: 10px;
+}
+
+.jd-app ul li:nth-child(2) {
+  width: 10%;
+}
+
+.jd-app ul li:nth-child(2) img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.jd-app ul li:nth-child(3) {
+  width: 57%;
+}
+
+.jd-app ul li:nth-child(4) {
+  width: 25%;
+  background-color: #ff450f;
+}
+
+/* 搜索 */
+.jd-search {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 45px;
+  min-width: 320px;
+  max-width: 750px;
+}
+
+.search-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 45px;
+  background: url(../images/s-btn.png) no-repeat center center;
+  background-size: 20px 20px;
+}
+
+.search-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+}
+
+.search {
+  position: relative;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 6px 50px 0;
+}
+
+.jd-icon {
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  width: 20px;
+  height: 15px;
+  background: url(../images/jd.png) no-repeat center center;
+  background-size: 20px 15px;
+}
+
+.jd-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 1px;
+  height: 15px;
+  background-color: #ccc;
+}
+
+.search-icon {
+  position: absolute;
+  top: 7px;
+  left: 53px;
+  width: 18px;
+  height: 15px;
+  /* 测得的位置为（-166px,0),实际位置写成(-83px,0) */
+  background: url(../images/jd-sprites.png) no-repeat -83px 0;
+  /* 二倍精灵图原始大小为400*400,需要缩小为一半 */
+  background-size: 200px;
+}
+
+/* 主体 */
+/* 焦点图 */
+.banner img {
+  width: 100%;
+}
+
+/* 品牌日 */
+.brand {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.brand div {
+  float: left;
+  width: 33.33%
+}
+
+.brand img {
+  width: 100%;
+}
+
+/* nav */
+nav {
+  margin-top: 10px;
+}
+
+nav ul li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+nav ul li img {
+  width: 40px;
+}
+
+nav ul li p {
+  margin-top: 5px;
+}
+
+/* news */
+.news img {
+  width: 100%;
+}
+
+.news a {
+  float: left;
+}
+
+.news a:nth-child(1) {
+  width: 50%;
+}
+
+.news a:nth-child(n+2) {
+  width: 25%;
+  border-left: 1px solid #ccc;
+}

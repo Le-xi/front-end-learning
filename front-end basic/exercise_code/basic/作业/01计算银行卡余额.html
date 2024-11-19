@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  table {
+    width: 500px;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  table td,
+  table th {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+
+<body>
+  <h2>2024年6月消费支出</h2>
+  <script>
+    let water = prompt('请输入水费:');
+    let electricity = prompt('请输入电费:');
+    let internet = prompt('请输入网络费:');
+    let total = parseFloat(water) + parseFloat(electricity) + parseFloat(internet);
+    let bankCard = 10000;
+    total = bankCard - total;
+    document.write(`
+      <table>
+        <tr>
+          <th>银行卡总额</th>
+          <th>水费</th>
+          <th>电费</th>
+          <th>网络费</th>
+          <th>银行卡余额</th>
+        </tr>
+        <tr>
+          <td>10000元</td>
+          <td>${water}元</td>
+          <td>${electricity}元</td>
+          <td>${internet}元</td>
+          <td>${total}元</td>
+        </tr>
+      </table>
+    `);
+  </script>
+</body>
+
+</html>
