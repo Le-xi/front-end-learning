@@ -71,7 +71,7 @@ IcoMoon 成立于 2011 年，推出了第一个自定义图标字体生成器，
 
 （5）字体图标的引入（以 icomoon 为例）
 - 把下载包里面的 **fonts** 文件夹放入页面根目录下
-![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626140813.png)
+![1](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626140813.png)
 
 - 在 CSS 样式中全局声明字体： 简单理解把这些字体文件通过 css 引入到我们页面中。注意字体文件路径的问题。
 ```css
