@@ -69,7 +69,7 @@ IcoMoon 成立于 2011 年，推出了第一个自定义图标字体生成器，
 - **阿里** **iconfont** **字库** [http://www.iconfont.cn/](http://www.iconfont.cn/) 推荐指数 **★★★★★**
 这个是阿里妈妈 M2UX 的一个 iconfont 字体图标字库，包含了淘宝图标库和阿里妈妈图标库。可以使用 AI 制作图标上传生成。重点是，免费！
 
-（5）字体图标的引入（以 icomoon 为例）
+（5）字体图标的引入（以 icomoon 为例）git 
 - 把下载包里面的 **fonts** 文件夹放入页面根目录下
 ![1](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240626140813.png)
 
