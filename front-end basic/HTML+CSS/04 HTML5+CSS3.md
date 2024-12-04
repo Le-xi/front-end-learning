@@ -1339,7 +1339,7 @@ div {
 </html>
 ```
 
-![打字机案例.gif](https://github.com/Le-xi/front-end-learning/blob/main/images/)
+![打字机案例](https://github.com/Le-xi/front-end-learning/blob/main/images/打字机案例.gif)
 
 > **案例：奔跑的北极熊**
 
