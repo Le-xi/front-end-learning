@@ -200,8 +200,8 @@ const PI = 3.14
 基本类型又叫做简单数据类型或者值类型，简单数据类型/基本数据类型，在存储时变量中存储的是**值本身**，因此叫做值类型。
 简单数据存放到栈里面。
 栈（操作系统）：由操作系统自动分配释放存放函数的参数值、局部变量的值等。其操作方式类似于数据结构中的栈。
-![[Pasted image 20240625082732.png]]
-![[Pasted image 20240625082833.png]]
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240625082732.png)
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240625082833.png)
 (1) 数值
 
 ```js
@@ -268,7 +268,7 @@ document.write(`我今年${age}岁了。`);
 
 复杂类型又叫做引用类型。引用数据类型存放到堆里面，里面存放的是地址。
 堆（操作系统）：存储复杂类型 (对象)，一般由程序员分配释放，若程序员不释放，由垃圾回收机制回收。
-![[Pasted image 20240625082813.png]]
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240625082813.png)
 
 ## 5.3 类型转换
 
@@ -378,7 +378,7 @@ console.log(Number(str));
 | !    | 逻辑非 | 取反     | true 变 false false 变 true | 真变假，假变真 |
 
 （3）运算符优先级
-![[Pasted image 20240618081531.png]]
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20240618081531.png)
 
 # 7 程序控制语句
 
@@ -633,7 +633,7 @@ join();
 join(separator);
 ```
 
-![[Pasted image 20241031143228.png]]
+![](https://github.com/Le-xi/front-end-learning/blob/main/images/Pasted_image_20241031143228.png)
 
 # 9 函数
 
